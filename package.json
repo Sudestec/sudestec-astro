@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "sudestec-astro",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -11,5 +11,8 @@
   },
   "dependencies": {
     "astro": "^2.8.3"
+  },
+  "devDependencies": {
+    "wrangler": "^3.2.0"
   }
 }
