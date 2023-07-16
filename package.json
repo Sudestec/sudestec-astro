@@ -10,6 +10,8 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/cloudflare": "^6.6.1",
+    "@astrojs/solid-js": "^2.2.0",
     "astro": "^2.8.3"
   },
   "devDependencies": {
