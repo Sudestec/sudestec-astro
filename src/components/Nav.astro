@@ -1,24 +1,21 @@
 ---
-import Logo from './Logo.astro';
+import Logo from './Logo.astro'
 ---
+
 <style>
-  nav {
+	nav {
     display: flex;
     align-items: center;
-    border-bottom: 1px solid black;
-  }
-  nav > img {
-    flex: auto;
-    justify-content: left;
-  }
-  nav > a {
+		border-bottom: 1px solid black;
+    padding-bottom: .5em;
+  	}
+	nav > a {
+    display: flex;
     flex: auto;
     justify-content: right;
-  }
-
+	}
 </style>
 <nav>
-  <Logo />
-  <h1>Sudestec</h1>
-  
+	<Logo />
+	<a href="#">About</a>
 </nav>
