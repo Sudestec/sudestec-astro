@@ -18,8 +18,10 @@ import Layout from '../layouts/Layout.astro';
 				<p>
 					Este es el precio actual del servicio: <WeeklyPrice />.
 				</p>
-				<DiskAvailable />
-				<PsuAvailable />
+				<div>
+					<DiskAvailable />
+					<PsuAvailable />
+				</div>
 		</section>
 		<section>
 			<h2>Garantía de calidad</h2>
@@ -44,4 +46,7 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <style>
+	section > div {
+		display: flex;
+	}
 </style>

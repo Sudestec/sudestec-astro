@@ -1,4 +1,6 @@
 ---
+export const prerender = true;
+
 import { currencyFormat } from '../../functions/formatters/currencyFormat' ;
 
 const response = await fetch('https://api.mercadolibre.com/sites/MLA/search?q=fuente 500&shipping_cost=free&power_seller=yes&sort=price_asc&limit=1'),
