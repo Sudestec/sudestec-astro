@@ -1,0 +1,24 @@
+---
+import { currencyFormat } from '../../functions/formatters/currencyFormat' ;
+
+const response = await fetch('https://api.mercadolibre.com/sites/MLA/search?q=480&shipping_cost=free&category=MLA1672&power_seller=yes&BRAND=16360,9593,18623&HARD_DRIVE_AND_SSD_FORM_FACTOR=9049266&sort=price_asc&limit=3'),
+	data = await response.json(),
+	item = {
+        descripcion: data.results[0].title,
+        precio: currencyFormat.format(data.results[0].price),
+        link: data.results[0].permalink,
+        foto: data.results[0].thumbnail
+    };
+---
+
+<article>
+	<header>
+		{ item.descripcion }
+	</header>
+	<img src=`${item.foto}` alt=`${item.descripcion}`>
+	<footer>
+		<span>
+			{ item.precio }
+		</span>
+	</footer>
+</article>

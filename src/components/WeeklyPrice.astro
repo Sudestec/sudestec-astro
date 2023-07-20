@@ -1,8 +1,11 @@
 ---
-const response = await fetch(`${import.meta.env.APP_URL}/weekly`),
-	data = await response.json();
+import { currencyFormat } from '../../functions/formatters/currencyFormat' ;
+
+	const response = await fetch(`${import.meta.env.APP_URL}/weekly`),
+	data = await response.json(),
+	displayCost = currencyFormat.format(data.cost);
 ---
 
 <span>
-	{ data.cost }
+	{ displayCost }
 </span>

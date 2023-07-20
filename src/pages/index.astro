@@ -1,15 +1,45 @@
 ---
+import DiskAvailable from '../components/DiskAvailable.astro';
+import PsuAvailable from '../components/PsuAvailable.astro';
 import WeeklyPrice from '../components/WeeklyPrice.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Sudestec">
 	<main>
-		<h1>Welcome to <span class="text-gradient">Sudestec!</span></h1>
-			<p >
-				Este es el precio actual del servicio: <WeeklyPrice />.
+		<section>
+			<h2>Nuestro compromiso</h2>
+			<p>
+				Bienvenido a nuestros servicios excepcionales de reparación de computadoras. Somos expertos en devolverle la vida a tu equipo de manera rápida y confiable. Nuestro compromiso es tu satisfacción. Confía en nosotros para resolver tus problemas tecnológicos y mantener tu computadora en óptimas condiciones. Recupera la potencia de tu computadora y mantente conectado con lo que más importa.
 			</p>
-		<button>Hola</button>
+		</section>
+		<section>
+			<h2>Servicios</h2>
+				<p>
+					Este es el precio actual del servicio: <WeeklyPrice />.
+				</p>
+				<DiskAvailable />
+				<PsuAvailable />
+		</section>
+		<section>
+			<h2>Garantía de calidad</h2>
+				<p>
+					En nuestra empresa, nos comprometemos al 100% con el restablecimiento completo del funcionamiento de tu equipo. Todas nuestras reparaciones cuentan con una garantía de un mes, lo que significa que durante este período, cualquier ajuste que sea necesario se realizará sin costo alguno y brindaremos soporte remoto para asegurarnos de que tu computadora funcione perfectamente. Utilizamos repuestos con garantía oficial, garantizando así la calidad de nuestros servicios. Sin embargo, en el caso improbable de que no podamos cumplir con nuestro compromiso de reparación, te ofrecemos la tranquilidad de que te devolveremos el dinero. Tu satisfacción y confianza son nuestra prioridad.
+				</p>
+		</section>
+		<section>
+			<h2>Agendá tu servicio</h2>
+				<p>
+					Para contactarte con nosotros y agendar el retiro de tu equipo.
+				</p>
+				<button>¡Quiero reparar mi equipo!</button>
+		</section>
+		<section>
+			<h2>Area de cobertura</h2>
+				<p>
+					Por el momento solo estamos recibiendo trabajos dentro del area de Capital Federal.
+				</p>
+		</section>
 	</main>
 </Layout>
 
