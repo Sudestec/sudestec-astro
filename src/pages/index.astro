@@ -1,5 +1,6 @@
 ---
 import DiskAvailable from '../components/DiskAvailable.astro';
+import FamilyPrice from '../components/FamilyPrice.astro';
 import PsuAvailable from '../components/PsuAvailable.astro';
 import WeeklyPrice from '../components/WeeklyPrice.astro';
 import Layout from '../layouts/Layout.astro';
@@ -15,13 +16,17 @@ import Layout from '../layouts/Layout.astro';
 		</section>
 		<section>
 			<h2>Servicios</h2>
-				<p>
-					Este es el precio actual del servicio: <WeeklyPrice />.
-				</p>
-				<div>
-					<DiskAvailable />
-					<PsuAvailable />
-				</div>
+			<p>
+				Este es el precio actual del servicio: <WeeklyPrice />.
+			</p>
+			<p>
+				Este es el precio familiar del servicio: <FamilyPrice />.
+			</p>
+			<h3>Repuestos</h3>
+			<div>
+				<DiskAvailable />
+				<PsuAvailable />
+			</div>
 		</section>
 		<section>
 			<h2>Garantía de calidad</h2>

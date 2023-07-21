@@ -2,11 +2,11 @@
 import { currencyFormat } from '../../functions/formatters/currencyFormat' ;
 import { roundSignificant } from '../../functions/rules/rounding';
 
-const response = await fetch('https://api.mercadolibre.com/sites/MLA/search?q=fuente 500&shipping_cost=free&power_seller=yes&sort=price_asc&limit=1'),
+const response = await fetch('https://api.mercadolibre.com/sites/MLA/search?q=fuente 550&shipping_cost=free&category=MLA3794&power_seller=yes&sort=price_asc&limit=1'),
 	data = await response.json(),
 	item = {
         descripcion: data.results[0].title,
-        precio: currencyFormat.format(roundSignificant(data.results[0].price)),
+        precio: currencyFormat.format(roundSignificant(data.results[0].price*1.1)),
         link: data.results[0].permalink,
         foto: data.results[0].thumbnail
     };
