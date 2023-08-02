@@ -6,7 +6,7 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro build && wrangler pages dev --compatibility-date=2023-07-24 ./dist",
+    "preview": "wrangler pages dev --compatibility-date=2023-07-24 ./dist",
     "astro": "astro",
     "pages:dev": "wrangler pages dev --compatibility-date=2023-07-22 --proxy 3000 -- astro dev",
     "pages:deploy": "astro build && wrangler pages deploy ./dist"
