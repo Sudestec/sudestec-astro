@@ -11,8 +11,13 @@ const response = await fetch('https://api.mercadolibre.com/sites/MLA/search?q=48
   };
 ---
 
-<article>
-  <h5>{item.descripcion}</h5>
-  <img src=`${item.foto}` alt=`${item.descripcion}` />
-  <small>{item.precio}</small>
-</article>
+<style>
+  img {
+    max-height: 100px;
+  }
+</style>
+<tr>
+  <th scope="row">{item.descripcion}</th>
+  <td><img src=`${item.foto}` alt=`${item.descripcion}` /></td>
+  <td>{item.precio}</td>
+</tr>

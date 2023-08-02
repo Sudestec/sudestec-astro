@@ -11,8 +11,17 @@ import WeeklyPrice from './WeeklyPrice.astro';
     <FamilyPrice />
   </div>
   <h3>Repuestos</h3>
-  <div class='grid'>
-    <DiskAvailable />
-    <PsuAvailable />
-  </div>
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">Parte</th>
+        <th scope="col">Foto</th>
+        <th scope="col">Precio</th>
+      </tr>
+    </thead>
+    <tbody>
+      <DiskAvailable />
+      <PsuAvailable />
+    </tbody>
+  </table>
 </section>
