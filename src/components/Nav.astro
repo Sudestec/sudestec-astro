@@ -1,21 +1,19 @@
 ---
-import Logo from './Logo.astro'
+import Logo from './Logo.astro';
 ---
 
-<style>
-	nav {
-    display: flex;
-    align-items: center;
-		border-bottom: 1px solid black;
-    padding-bottom: .5em;
-  	}
-	nav > a {
-    display: flex;
-    flex: auto;
-    justify-content: right;
-	}
-</style>
-<nav>
-	<Logo />
-	<a href="#">About</a>
+<nav class='container-fluid'>
+  <ul>
+    <li>
+      <Logo />
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <a href='#'>Servicios</a>
+    </li>
+    <li>
+      <a href='#'>About</a>
+    </li>
+  </ul>
 </nav>

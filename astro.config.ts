@@ -5,6 +5,6 @@ import cloudflare from '@astrojs/cloudflare';
 // https://astro.build/config
 export default defineConfig({
   integrations: [solidJs()],
-  output: 'server',
+  output: 'hybrid',
   adapter: cloudflare({ mode: 'directory' })
 });
