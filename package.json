@@ -21,6 +21,7 @@
     "eslint-plugin-astro": "^0.27.2",
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-solid": "^0.12.1",
+    "hono": "^3.3.4",
     "solid-js": "^1.7.8",
     "wrangler": "^3.4.0"
   }
