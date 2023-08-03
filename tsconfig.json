@@ -1,5 +1,4 @@
 {
-  "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",
@@ -12,6 +11,6 @@
     "skipLibCheck": true,
     "baseUrl": ".",
     "ignoreDeprecations": "5.0",
-    "allowJs": true
+    "strict": false
   }
 }
