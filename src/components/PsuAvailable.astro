@@ -10,6 +10,7 @@ const response = await fetch('https://api.mercadolibre.com/sites/MLA/search?ship
     link: data.results[0].permalink,
     foto: data.results[0].thumbnail,
   };
+  console.log(Astro.url)
 ---
 <style>
   img {

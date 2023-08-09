@@ -11,6 +11,11 @@
     "skipLibCheck": true,
     "baseUrl": ".",
     "ignoreDeprecations": "5.0",
-    "strict": false
+    "strict": false,
+    "lib": ["esnext"],
+    "types": ["@cloudflare/workers-types"],
+    "importsNotUsedAsValues": "error",
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true
   }
 }

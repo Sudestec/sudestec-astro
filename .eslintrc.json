@@ -5,8 +5,9 @@
 		"node": true
 	},
 	"ignorePatterns": ["/functions/[[path]].js"],
-	"plugins": ["solid"],
-	"extends": ["eslint:recommended", "plugin:astro/base", "plugin:solid/recommended"],
+	"plugins": ["@typescript-eslint"],
+	"extends": ["eslint:recommended", "plugin:astro/base", "plugin:solid/recommended", "plugin:@typescript-eslint/recommended"],
+	"parser": "@typescript-eslint/parser",
 	"parserOptions": {
 		"overrides": [
 			{

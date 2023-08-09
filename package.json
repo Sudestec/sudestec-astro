@@ -3,26 +3,28 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
+    "dev": "astro dev --host",
     "start": "astro dev",
     "build": "astro build",
     "preview": "wrangler pages dev --compatibility-date=2023-07-24 ./dist",
+    "build-preview": "astro build && wrangler pages dev --compatibility-date=2023-07-24 ./dist",
     "astro": "astro",
     "pages:dev": "wrangler pages dev --compatibility-date=2023-07-22 --proxy 3000 -- astro dev",
     "pages:deploy": "astro build && wrangler pages deploy ./dist"
   },
   "dependencies": {
     "@astrojs/cloudflare": "^6.6.1",
-    "@astrojs/solid-js": "^2.2.0",
-    "astro": "^2.8.3"
+    "nanostores": "^0.9.3"
   },
   "devDependencies": {
-    "eslint": "^8.45.0",
+    "@cloudflare/workers-types": "^4.20230801.0",
+    "@typescript-eslint/eslint-plugin": "^6.2.1",
+    "@typescript-eslint/parser": "^6.2.1",
+    "eslint": "^8.46.0",
     "eslint-plugin-astro": "^0.27.2",
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-solid": "^0.12.1",
-    "hono": "^3.3.4",
-    "solid-js": "^1.7.8",
+    "typescript": "^5.1.6",
     "wrangler": "^3.4.0"
   }
 }

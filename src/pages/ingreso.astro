@@ -1,0 +1,24 @@
+---
+import { getAuth } from 'src/auth';
+import Layout from '../layouts/Layout.astro';
+import LoginForm from 'src/components/LoginForm.astro';
+import Welcome from 'src/components/Welcome.astro';
+
+if (Astro.request.method === "POST") {
+  try {
+    const response = await getAuth(Astro.request);
+    if (typeof response === 'object') {
+      Astro.locals.auth = response;
+      Astro.response.headers.append('Authorization', `Bearer ${Astro.locals.auth.token}`)
+  }
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error('ingreso.astro',error.message, error.cause, error.stack);
+    }
+  }
+}
+---
+
+<Layout title='Ingreso'>
+  {!Astro.locals.auth ? <LoginForm /> : <Welcome user={Astro.locals.auth.record} />}
+</Layout>

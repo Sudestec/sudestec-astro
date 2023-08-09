@@ -1,8 +1,10 @@
 ---
+import Welcome from 'src/components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title='Sudestec'>
+  {!Astro.locals.auth ? <p>Logged Out</p> : <Welcome user={Astro.locals.auth.record}/>}
   <section>
     <h2>Nuestro compromiso</h2>
     <p>
